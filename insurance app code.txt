@@ -1,0 +1,33 @@
+#include<stdio.h>
+void healt_premium();  //function declarartion
+void main(){
+int choice;
+printf("****Welcome to MyInsurance Portal*****\n");
+printf("1.Health Insurance \n");
+printf("2.Vehicle Insurance \n");
+printf("Enter Your choice\n");
+scanf("%d",&choice);
+switch(choice){
+case 1: health_premium();
+        break;
+case 2: 
+default:printf("Invalid choice\n");
+        break;
+}
+
+}
+void health_premium(){ //function definition
+int age;                   //local varaiable
+printf("Enter Your Age is between 18 Yrs to 70 Yrs::");
+scanf("%d",&age);
+if(age >=18 && age <35){
+   printf("Your Premium is Rs 30000/-");
+} else if (age >=35 && age <60){
+  printf("Your Premium is Rs 50000/-");
+}else if(age>=60 && age <=70){
+  printf("Your Premium is Rs 80000/-");
+}else{
+ printf("Your are not eligible");
+}
+ 
+}
